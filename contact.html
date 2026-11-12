@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Explorer | Contact</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <nav class="bg-white shadow-md px-8 py-5 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-blue-600">TravelExplorer</h1>
+    <div class="space-x-6 font-medium">
+      <a href="index.html" class="hover:text-blue-600">Home</a>
+      <a href="destinations.html" class="hover:text-blue-600">Destinations</a>
+      <a href="contact.html" class="text-blue-600">Contact</a>
+    </div>
+  </nav>
+
+  <header class="bg-blue-600 text-white text-center py-16">
+    <h2 class="text-4xl font-bold mb-3">Contact Us</h2>
+    <p class="text-lg">We would love to hear from you!</p>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-12">
+
+    <section>
+      <h3 class="text-2xl font-bold mb-6">Get In Touch</h3>
+
+      <p class="text-gray-600 mb-8">
+        Have questions about your next adventure?
+        Send us a message and we will get back to you.
+      </p>
+
+      <div class="space-y-5">
+        <div>
+          <h4 class="font-bold text-lg">Email</h4>
+          <p class="text-gray-600">info@travelexplorer.com</p>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-lg">Phone</h4>
+          <p class="text-gray-600">+92 300 1234567</p>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-lg">Location</h4>
+          <p class="text-gray-600">Karachi, Pakistan</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white shadow-lg rounded-xl p-8">
+      <h3 class="text-2xl font-bold mb-6">Send a Message</h3>
+
+      <form id="contactForm" class="space-y-5">
+
+        <div>
+          <label class="block mb-2 font-medium">Your Name</label>
+          <input type="text" required placeholder="Enter your name"
+            class="w-full border rounded-lg p-3 focus:ring-2 focus:ring-blue-500 outline-none">
+        </div>
+
+        <div>
+          <label class="block mb-2 font-medium">Your Email</label>
+          <input type="email" required placeholder="Enter your email"
+            class="w-full border rounded-lg p-3 focus:ring-2 focus:ring-blue-500 outline-none">
+        </div>
+
+        <div>
+          <label class="block mb-2 font-medium">Subject</label>
+          <input type="text" required placeholder="Enter subject"
+            class="w-full border rounded-lg p-3 focus:ring-2 focus:ring-blue-500 outline-none">
+        </div>
+
+        <div>
+          <label class="block mb-2 font-medium">Message</label>
+          <textarea rows="4" required placeholder="Write your message"
+            class="w-full border rounded-lg p-3 focus:ring-2 focus:ring-blue-500 outline-none"></textarea>
+        </div>
+
+        <button type="submit"
+          class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold">
+          Send Message
+        </button>
+
+        <p id="successMessage" class="text-green-600 hidden">
+          Thank you! Your message has been received.
+        </p>
+
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="bg-gray-900 text-white text-center p-6">
+    <p>© 2026 Travel Explorer. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      document.getElementById("successMessage").classList.remove("hidden");
+
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
